@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        int actualday=s.nextInt();
+        int actualmonth=s.nextInt();
+        int actualyear=s.nextInt();
+        int day=s.nextInt();
+        int month=s.nextInt();
+        int year=s.nextInt();
+        s.close();
+        int daylate=actualday-day;
+        int monthlate=actualmonth-month;
+        int yearlate=actualyear-year;
+        System.out.println((yearlate>0)?10000 :(monthlate>0 && yearlate==0)? monthlate*500 :(daylate>0 && yearlate==0)? daylate*15 :0);
+            
+
+    }
+}
