@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+class Difference {
+  	private int[] elements;
+  	public int maximumDifference;
+   Difference(int[] arr)
+   {
+       elements=arr;
+   }
+   void computeDifference(){
+       Arrays.sort(elements);
+         int i=elements[0];
+         int n=(elements.length-1);
+         int j=elements[n];
+         maximumDifference=(j-i);
+   }
+} // End of Difference class
